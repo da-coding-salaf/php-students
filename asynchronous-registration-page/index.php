@@ -44,6 +44,23 @@
 </table>
 
 
+<!-- <table border="1">
+	
+<form method="post" action="receiver.php">
+	
+	<tr><td style="font-weight: bold;text-align: center;text-transform: uppercase;">Calculator</td></tr>
+<tr><td><input type="number"  name="value_1" placeholder="Value 1"></td></tr>
+<tr><td><input type="number"  name="value_2" placeholder="Value 2"></td></tr>
+
+<tr><td><input type="submit"  step="" name="submit-btn" value ="Addition"></td></tr>
+
+
+
+</form>
+
+</table> -->
+
+
 
 
 
