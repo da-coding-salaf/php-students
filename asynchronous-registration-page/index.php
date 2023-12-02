@@ -30,11 +30,11 @@
 <form method="post" action="receiver.php">
 	
 	<tr><td style="font-weight: bold;text-align: center;text-transform: uppercase;">Registration</td></tr>
-<tr><td><input type="text"  name="first_name" placeholder="First Name"></td></tr>
-<tr><td><input type="text"  name="last_name" placeholder="Last Name"></td></tr>
-<tr><td><input type="email"  name="email" placeholder="Email"></td></tr>
-<tr><td><input type="password"  name="password" placeholder="Password"></td></tr>
-<tr><td><input type="password"  name="c_password" placeholder="Confirm Password"></td></tr>
+<tr><td><input type="text"  name="first_name" placeholder="First Name" required></td></tr>
+<tr><td><input type="text"  name="last_name" placeholder="Last Name" required></td></tr>
+<tr><td><input type="email"  name="email" placeholder="Email" required></td></tr>
+<tr><td><input type="password"  name="password" placeholder="Password" required></td></tr>
+<tr><td><input type="password"  name="c_password" placeholder="Confirm Password" required></td></tr>
 <tr><td><input type="submit"  step="" name="submit-btn" value ="Submit"></td></tr>
 
 
