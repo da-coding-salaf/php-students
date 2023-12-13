@@ -35,14 +35,16 @@ $result = $stmt->get_result();
 		
 if(strlen($password)<7){
 	echo "The length of your password must be >= 7";
+	exit;
 }
 
 if($result->num_rows==0){
 
 if($password==$c_password){
 	try {
+		$hash_password=password_hash ($password, PASSWORD_DEFAULT);
 $stmt = $conn->prepare("INSERT INTO  registration (email, `first-name`, `last-name`, password) VALUES(?,?,?,?)");
-$stmt->bind_param("ssss",$email, $first_name, $last_name, $password);
+$stmt->bind_param("ssss",$email, $first_name, $last_name, $hash_password);
 $stmt->execute();
 echo "New records created successfully";
 $stmt->close();
