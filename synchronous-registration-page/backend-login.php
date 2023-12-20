@@ -1,10 +1,9 @@
 <?php
-
+session_start();
 require('config.php');
 
 $email=$_POST['email'];
 $password=$_POST['password'];
-
 
 
 try {
@@ -19,7 +18,20 @@ $result = $stmt->get_result();
 
      	if(password_verify($password, $hash_password)){
      		
-     		echo "Correct password";
+     		$_SESSION['user_login']=1;
+               $_SESSION['email']=$email;
+               $_SESSION['firstname']=$row['first-name'];
+               $_SESSION['lastname']=$row['last-name'];
+
+               header("Location: dashboard.php");
+
+
+
+
+
+
+
+
 
      	}else{
      		echo "Incorrect password";
