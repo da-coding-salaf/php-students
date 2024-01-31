@@ -37,6 +37,7 @@ if(!isset($_SESSION['user_login'])||$_SESSION['user_login']!=1){
 
 
 <table border="1">
+
 	
 <form method="post" action="receiver.php">
 	
@@ -44,6 +45,7 @@ if(!isset($_SESSION['user_login'])||$_SESSION['user_login']!=1){
 <tr><td>Email:</td><td><?php echo $_SESSION['email']?></td></tr>
 <tr><td>First Name:</td><td><?php echo $_SESSION['firstname']?></td></tr>
 <tr><td>Last Name:</td><td><?php echo $_SESSION['lastname']?></td></tr>
+<tr><td colspan ="2"><a href="log-out.php">Log Out</a></td></tr>
 
 
 

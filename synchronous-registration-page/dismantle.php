@@ -1,23 +1,33 @@
 <?php
-session_start();
-require('config.php');
-
-$email=$_POST['email'];
-$password=$_POST['password'];
+require "config.php";
 
 
+$email="dacoding@gmail.com";
 try {
 $stmt = $conn->prepare("SELECT * from registration where email=? limit 1");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 
 
+
+
 $result = $stmt->get_result();
 
+$arr=["name"=>"Hello"];
 
- if($result->num_rows==1){
+	$field = $result->fetch_assoc();
 
- 		$row = $result->fetch_assoc();
+
+
+
+
+var_dump($field);
+
+
+
+/* if($result->num_rows==1){
+
+ 		
      	 $hash_password=$row['password'];
 
      	if(password_verify($password, $hash_password)){
@@ -44,7 +54,7 @@ $result = $stmt->get_result();
  }else{
      		echo "Email record not found on this platform";
      	}
-	
+*/	
 
 $stmt->close();
 }
@@ -53,7 +63,5 @@ catch (Exception $e) {
 		echo $e;
 		exit('Unable to make select request');
 }
-
-
 
 ?>
